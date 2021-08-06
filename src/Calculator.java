@@ -5,7 +5,7 @@ public class Calculator {
     BinaryOperator<Integer> plus = (x, y) -> x + y;
     BinaryOperator<Integer> minus = (x, y) -> x - y;
     BinaryOperator<Integer> multiply = (x, y) -> x * y;
-    // Операция divide вызывала ArithmeticException при делении на 0
+    // Операция divide вызывала ArithmeticException при делении на 0. Необходима проверка делителя на 0
     BinaryOperator<Integer> divide = (x, y) -> (y != 0) ? x / y : Integer.MAX_VALUE;
     UnaryOperator<Integer> pow2 = x -> x * x;
     UnaryOperator<Integer> abs = x -> x > 0 ? x : x * -1;
